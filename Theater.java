@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 /**
- * Write a description of class Theater here.
+ * A class that creates a theater object containing an array
+ * that stores general, seat-related information.
  *
  * @author Salvatore Anzalone
  * @version 5/1/2023
