@@ -1,9 +1,9 @@
-
 /**
- * Write a description of class Customer here.
+ * The customer that wants to see a show.  However, this will
+ * be a side class until further notice.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Salvatore Anzalone
+ * @version 5/1/2023
  */
 public class Customer
 {
