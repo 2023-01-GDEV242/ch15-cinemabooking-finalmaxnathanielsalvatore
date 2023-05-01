@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
 /**
- * Store the number of rows within a theater.
+ * Store the number of seats within a theater's rows.
  *
  * @author Salvatore Anzalone
  * @version 5/1/2023
  */
 public class Row
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    //The max number of seats
+    private int maxSeats;
 
     /**
      * Constructor for objects of class Row
@@ -17,18 +17,18 @@ public class Row
     public Row()
     {
         // initialise instance variables
-        x = 0;
+        maxSeats = 20;
     }
 
     /**
      * An example of a method - replace this comment with your own
      *
      * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return The max number of seats
      */
     public int sampleMethod(int y)
     {
         // put your code here
-        return x + y;
+        return maxSeats;
     }
 }
