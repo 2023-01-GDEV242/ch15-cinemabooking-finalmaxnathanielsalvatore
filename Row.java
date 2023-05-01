@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 
 /**
- * Write a description of class Row here.
+ * Store the number of rows within a theater.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Salvatore Anzalone
+ * @version 5/1/2023
  */
 public class Row
 {
