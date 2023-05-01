@@ -1,9 +1,10 @@
-
 /**
- * Write a description of class CinemaSystem here.
+ * A system that will create a cinema, initialise the theaters, and
+ * so on.  However, this will not contain the code logic, similar to
+ * the Simulator Project
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Salvatore Anzalone
+ * @version 5/1/2023
  */
 public class CinemaSystem
 {
