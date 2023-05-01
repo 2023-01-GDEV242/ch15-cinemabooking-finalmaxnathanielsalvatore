@@ -1,7 +1,7 @@
 /**
  * A system that will create a cinema, initialise the theaters, and
- * so on.  However, this will not contain the code logic, similar to
- * the Simulator Project
+ * provide show bookings for customers.  However, this will not
+ * contain the code logic, similar to the Simulator Project.
  *
  * @author Salvatore Anzalone
  * @version 5/1/2023
@@ -17,18 +17,16 @@ public class CinemaSystem
     public CinemaSystem()
     {
         // initialise instance variables
-        x = 0;
+        createCinema();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Creates a simple cinema
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    private int createCinema()
     {
         // put your code here
-        return x + y;
+        return x;
     }
 }
