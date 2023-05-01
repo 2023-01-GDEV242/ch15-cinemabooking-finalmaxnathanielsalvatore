@@ -1,19 +1,19 @@
 
 /**
- * Write a description of class SalvatoreDemo here.
+ * Write a description of class CinemaSystem here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class SalvatoreDemo
+public class CinemaSystem
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class SalvatoreDemo
+     * Constructor for objects of class CinemaSystem
      */
-    public SalvatoreDemo()
+    public CinemaSystem()
     {
         // initialise instance variables
         x = 0;
