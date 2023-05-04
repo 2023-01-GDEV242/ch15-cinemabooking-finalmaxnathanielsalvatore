@@ -35,7 +35,7 @@ public class CinemaSystem
      */
     public void getTime()
     {
-        System.out.println("This show begins at 5:30 PM");
+        System.out.println("This show begins at 4:40 PM");
     }
     
     /**
@@ -45,5 +45,13 @@ public class CinemaSystem
     {
         System.out.println("This show will air at your local " +
                             "cinema on May 10'th");
+    }
+    
+    /**
+     * Gets the details of the show
+     */
+    public void getDetails()
+    {
+        //Insert deatils here
     }
 }
