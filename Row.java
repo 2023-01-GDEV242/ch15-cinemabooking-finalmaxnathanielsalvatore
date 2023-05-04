@@ -1,34 +1,26 @@
 import java.util.ArrayList;
 
 /**
- * Store the number of seats within a theater's rows.
+ * This class represents a row in a theater.
  *
- * @author Salvatore Anzalone
- * @version 5/1/2023
+ * @author Max, Nathaniel, and Salvatore
+ * @version 2023.05.04
  */
 public class Row
 {
-    //The max number of seats
-    private int maxSeats;
+    // the row number
+    private int rowNumber;
+    // the list of seats
+    private ArrayList<Seat> seatList;
+    // the max number of seats per row
+    private final int MAX_SEATS = 20;
 
     /**
      * Constructor for objects of class Row
      */
-    public Row()
+    public Row(int r)
     {
-        // initialise instance variables
-        maxSeats = 20;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return The max number of seats
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return maxSeats;
+        rowNumber = r;
+        seatList = new ArrayList<Seat>();
     }
 }
