@@ -1,35 +1,27 @@
 import java.util.ArrayList;
 
 /**
- * A class that creates a theater object containing an array
- * that stores general, seat-related information.
+ * This class represents a theater in the cinema. A theater contains rows
+ * which in turn contain seats.
  *
- * @author Salvatore Anzalone
- * @version 5/1/2023
+ * @author Max, Nathaniel, and Salvatore
+ * @version 2023.05.04
  */
 public class Theater
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // the theater name
+    private String theaterName;
+    // the list of rows
+    private ArrayList<Row> rowList;
+    // the max number of rows per theater
+    private final int MAX_ROWS = 40;
 
     /**
      * Constructor for objects of class Theater
      */
-    public Theater()
+    public Theater(String t)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        theaterName = t;
+        rowList = new ArrayList<Row>();
     }
 }

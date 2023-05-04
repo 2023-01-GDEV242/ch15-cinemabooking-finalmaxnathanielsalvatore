@@ -13,7 +13,7 @@ public class Row
     // the list of seats
     private ArrayList<Seat> seatList;
     // the max number of seats per row
-    private final int MAX_SEATS = 20;
+    private final int MAX_SEATS = 30;
 
     /**
      * Constructor for objects of class Row
