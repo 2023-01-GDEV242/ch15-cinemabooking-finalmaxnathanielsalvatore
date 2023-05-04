@@ -1,20 +1,20 @@
 /**
- * Store the number of rows within a theater.
+ * This class represents an individual seat within a row of a theater.
  *
- * @author Salvatore Anzalone
- * @version 5/1/2023
+ * @author Max, Nathaniel, and Salvatore
+ * @version 2023.05.04
  */
 public class Seat
 {
-    //The seat number
+    // the seat number
     private int seatNumber;
 
     /**
      * Constructor for objects of class Seat
+     * @param s the seat number to be assigned
      */
     public Seat(int s)
     {
-        // initialise instance variables
         seatNumber = s;
     }
 }

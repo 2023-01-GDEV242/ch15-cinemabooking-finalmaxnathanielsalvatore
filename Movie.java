@@ -1,33 +1,40 @@
 
 /**
- * Write a description of class Movie here.
+ * This class represents a movie that is being screened at the cinema.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Max, Nathaniel, and Salvatore
+ * @version 2023.05.04
  */
 public class Movie
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // the title of the movie
+    private String title;
+    // the description of the movie
+    private String description;
+    // the first day the movie is screened in this cinema
+    private String startDate;
+    // the last day the movie is screened in this cinema
+    private String endDate;
+    // the content rating of the movie (G, PG, etc.)
+    private String contentRating;
+    // the price of tickets to watch the movie
+    private double price;
 
     /**
      * Constructor for objects of class Movie
      */
-    public Movie()
+    public Movie(String title, String description)
     {
-        // initialise instance variables
-        x = 0;
+        this.title = title;
+        this.description = description;
     }
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Accessor method for price.
+     * @return price.
      */
-    public int sampleMethod(int y)
+    public double getPrice()
     {
-        // put your code here
-        return x + y;
+        return price;
     }
 }
