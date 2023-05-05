@@ -4,11 +4,11 @@
  * contain the code logic, similar to the Simulator Project.
  *
  * @author Salvatore Anzalone
- * @version 5/4/2023
+ * @version 5/5/2023
  */
 public class CinemaSystem
 {
-    // instance variables - replace the example below with your own
+    // Shows a list
     private int x;
 
     /**

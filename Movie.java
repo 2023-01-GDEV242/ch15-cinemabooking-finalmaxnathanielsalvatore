@@ -1,9 +1,8 @@
-
 /**
  * This class represents a movie that is being screened at the cinema.
  *
  * @author Max, Nathaniel, and Salvatore
- * @version 2023.05.04
+ * @version 2023.05.05
  */
 public class Movie
 {

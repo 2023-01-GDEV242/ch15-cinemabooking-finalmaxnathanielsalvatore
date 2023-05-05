@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * of the booking, and the phone number that they can be contacted at.
  *
  * @author Max, Nathaniel, and Salvatore
- * @version 2023.05.04
+ * @version 2023.05.05
  */
 public class Booking
 {

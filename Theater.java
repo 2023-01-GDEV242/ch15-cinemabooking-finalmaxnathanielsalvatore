@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * which in turn contain seats.
  *
  * @author Max, Nathaniel, and Salvatore
- * @version 2023.05.04
+ * @version 2023.05.05
  */
 public class Theater
 {
@@ -14,7 +14,7 @@ public class Theater
     // the list of rows
     private ArrayList<Row> rowList;
     // the max number of rows per theater
-    private final int MAX_ROWS = 40;
+    private final int MAX_ROWS = 30;
 
     /**
      * Constructor for objects of class Theater
