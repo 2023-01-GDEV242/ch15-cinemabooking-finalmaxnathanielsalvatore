@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * A system that will create a cinema, initialise the theaters, and
  * provide show bookings for customers.  However, this will not
@@ -8,26 +10,24 @@
  */
 public class CinemaSystem
 {
-    // Shows a list
-    private int x;
+    // A list of shows from the collection
+    private ShowCollection showList;
 
     /**
      * Constructor for objects of class CinemaSystem
      */
-    public CinemaSystem()
+    public CinemaSystem(ShowCollection showList)
     {
-        // initialise instance variables
+        this.showList = showList;
         createCinema();
     }
 
     /**
-     * Creates a simple cinema
-     *
+     * Creates a simple cinema, while presenting the details.
      */
-    private int createCinema()
+    private ShowCollection createCinema()
     {
-        // put your code here
-        return x;
+        return showList;
     }
     
     /**
@@ -45,13 +45,5 @@ public class CinemaSystem
     {
         System.out.println("This show will air at your local " +
                             "cinema on May 10'th");
-    }
-    
-    /**
-     * Gets the details of the show
-     */
-    public void getDetails()
-    {
-        //Insert deatils here
     }
 }
