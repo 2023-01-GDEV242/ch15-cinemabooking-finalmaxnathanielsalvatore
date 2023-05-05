@@ -46,6 +46,16 @@ public class Row
     }
     
     /**
+     * Returns a particular seat in the row.
+     * @param seatIndex the index of the seat.
+     * @return the seat.
+     */
+    public Seat getSeat(int seatIndex)
+    {
+        return seatList.get(seatIndex);
+    }
+    
+    /**
      * Adds a seat to the row.
      */
     public void addSeat()

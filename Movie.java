@@ -26,6 +26,7 @@ public class Movie
     {
         this.title = title;
         this.description = description;
+        price = 0;
     }
     
     /**

@@ -82,8 +82,8 @@ public class ShowSeating
                 available = false;
         if (available)
         {
-            for (int i = 0; i < seats.size(); i ++)
-                seats.set(i, false);
+            for (int seatIndex : seatIndexes)
+                availableSeats.get(rowIndex).set(seatIndex, false);
             return true;
         }
         return false;
