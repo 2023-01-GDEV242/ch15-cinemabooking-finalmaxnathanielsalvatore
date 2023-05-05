@@ -17,6 +17,7 @@ public class Booking
     private ArrayList<Seat> seats;
     private double price;
     private String phoneNumber;
+    boolean cancelled;
 
     /**
      * Constructor for objects of class Booking
@@ -30,8 +31,27 @@ public class Booking
         this.seats = seats;
         price = calculatePrice();
         this.phoneNumber = phoneNumber;
+        cancelled = false;
     }
 
+    /**
+     * Accessor method for show.
+     * @return show.
+     */
+    public Show getShow()
+    {
+        return show;
+    }
+    
+    /**
+     * Accessor method for phoneNumber.
+     * @return phoneNumber.
+     */
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+    
     /**
      * Calculates the total price of the booking by multiplying the price of
      * the movie by the number of seats booked.
@@ -40,5 +60,34 @@ public class Booking
     private double calculatePrice()
     {
         return show.getMoviePrice() * seats.size();
+    }
+    
+    /**
+     * Returns the row number of the booking.
+     * @return the row number of the booking.
+     */
+    public int getRowNum()
+    {
+        return row.getRowNum();
+    }
+    
+    /**
+     * Returns the seat number(s) of the booking.
+     * @return the seat number(s) of the booking.
+     */
+    public ArrayList<Integer> getSeatNums()
+    {
+        ArrayList<Integer> seatNums = new ArrayList<Integer>();
+        for (Seat seat : seats)
+            seatNums.add(seat.getSeatNum());
+        return seatNums;
+    }
+    
+    /**
+     * Cancels the booking and sets the seats to free.
+     */
+    public void cancel()
+    {
+        // cancels the booking and sets the seats to free
     }
 }

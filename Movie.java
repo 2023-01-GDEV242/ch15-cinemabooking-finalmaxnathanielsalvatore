@@ -29,6 +29,15 @@ public class Movie
     }
     
     /**
+     * Accessor method for title.
+     * @return title.
+     */
+    public String getTitle()
+    {
+        return title;
+    }
+    
+    /**
      * Accessor method for price.
      * @return price.
      */

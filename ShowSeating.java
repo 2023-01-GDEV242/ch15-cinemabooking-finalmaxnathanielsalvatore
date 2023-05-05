@@ -9,12 +9,6 @@ import java.util.ArrayList;
  */
 public class ShowSeating
 {
-    //Seats that are either free or not free
-    private boolean freeSeat;
-    //Seats that are reserved
-    private boolean reserveSeat;
-    //Indicate if a show has been cancelled or not
-    private boolean open;
     // the show
     private Show show;
     // the theater
@@ -33,52 +27,95 @@ public class ShowSeating
         this.show = show;
         this.theater = theater;
         availableSeats = new ArrayList<ArrayList<Boolean>>();
-        freeSeat = false;
-        reserveSeat = false;
-        open = false;
+        initialize();
     }
     
     /**
-     * Indicates whether a seat is free, or if it has been
-     * taken in-person, or taken through a reservation.
-     *
-     * @param freeSeat  Seats that are either free or not free
-     * @param reserveSeat  Seats that are reserved
-     * @param open  Indicate if a show has been cancelled or not
-     * @return A seat that is free or not, and indicate if a show
-     * has been cancelled or not
+     * Initializes the seating list with false values for each seat in the
+     * theater.
      */
-    public boolean available()
+    private void initialize()
     {
-        if(freeSeat == true)
+        for (int i = 0; i < theater.getNumRows(); i ++)
         {
-            System.out.println("Not taken");
-            
-            return freeSeat;
+            ArrayList<Boolean> booleanList = new ArrayList<Boolean>();
+            for (int j = 0; j < theater.getRow(i).getNumSeats(); j ++)
+                booleanList.add(true);
+            availableSeats.add(booleanList);
         }
+    }
+    
+    /**
+     * Accessor method for theater.
+     * @return theater.
+     */
+    public Theater getTheater()
+    {
+        return theater;
+    }
+    
+    /**
+     * Returns the number of free seats for this show in this theater.
+     * @return the number of free seats.
+     */
+    public int numFreeSeats()
+    {
+        return 0;
+    }
+    
+    /**
+     * Reserves a seat by setting its value in availableSeats to false. If the
+     * seat was already reserved, the reservation fails.
+     * @param rowIndex the index of the row where seats are being reserved.
+     * @param seatIndexes the index of the seats that are being reserved.
+     */
+    public boolean acceptReservation(int rowIndex,
+                                        ArrayList<Integer> seatIndexes)
+    {
+        ArrayList<Boolean> seats = new ArrayList<Boolean>();
+        for (int seatIndex : seatIndexes)
+            seats.add(availableSeats.get(rowIndex).get(seatIndex));
         
-        else if(freeSeat == false)
+        boolean available = true;
+        for (boolean seat : seats)
+            if (seat == false)
+                available = false;
+        if (available)
         {
-            System.out.println("Taken in-person");
-            
-            return freeSeat;
+            for (int i = 0; i < seats.size(); i ++)
+                seats.set(i, false);
+            return true;
         }
-        
-        else if(reserveSeat == true)
-        {
-            System.out.println("Taken as reservation");
-            
-            return freeSeat;
-        }
-        
-        if(open == true)
-        {
-            return open;
-        }
-        
-        else
-        {
-            return open;
-        }
+        return false;
+    }
+    
+    /**
+     * Returns a list of the indexes of rows with available seats.
+     * @return a list of the indexes of rows with available seats.
+     */
+    public ArrayList<Integer> getFreeRows()
+    {
+        return null;
+    }
+    
+    /**
+     * Returns a list of the indexes of available seats within a row.
+     * @param rowIndex the index of the row being checked.
+     * @return a list of the indexes of available seats.
+     */
+    public ArrayList<Integer> getFreeSeats(int rowIndex)
+    {
+        return null;
+    }
+    
+    /**
+     * Checks the seating for x adjoining seats.
+     * @param x the number of adjoining seats.
+     * @return the list of row numbers that contain x adjoining seats. If no
+     * row contains x adjoining seats, then null is returned.
+     */
+    public ArrayList<Integer> xFreeSeats(int x)
+    {
+        return null;
     }
 }

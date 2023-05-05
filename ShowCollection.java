@@ -19,4 +19,41 @@ public class ShowCollection
     {
         showList = new ArrayList<Show>();
     }
+    
+    /**
+     * Adds a show to the collection.
+     * @param show the show to be added.
+     */
+    public void add(Show show)
+    {
+        showList.add(show);
+    }
+    
+    /**
+     * Searches showList for shows being screened on a particular day.
+     * @param day the day being searched.
+     * @return the list of shows being screened on that day.
+     */
+    public ShowCollection findShowsByDay(String day)
+    {
+        ShowCollection shows = new ShowCollection();
+        for (Show show : showList)
+            if (day.equals(show.getDate()))
+                shows.add(show);
+        return shows;
+    }
+    
+    /**
+     * Searches showList for shows of a particular movie.
+     * @param movie the movie being searched.
+     * @return the list of shows of that movie.
+     */
+    public ShowCollection findShowsByMovie(Movie movie)
+    {
+        ShowCollection shows = new ShowCollection();
+        for (Show show : showList)
+            if (movie == show.getMovie())
+                shows.add(show);
+        return shows;
+    }
 }
